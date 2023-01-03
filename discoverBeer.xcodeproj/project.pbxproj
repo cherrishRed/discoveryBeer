@@ -11,6 +11,7 @@
 		9DDE9E772964464200E47FD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE9E762964464200E47FD0 /* ContentView.swift */; };
 		9DDE9E792964464300E47FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE9E782964464300E47FD0 /* Assets.xcassets */; };
 		9DDE9E7C2964464300E47FD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE9E7B2964464300E47FD0 /* Preview Assets.xcassets */; };
+		9DDE9E832964620400E47FD0 /* BeerElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE9E822964620400E47FD0 /* BeerElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		9DDE9E762964464200E47FD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9DDE9E782964464300E47FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DDE9E7B2964464300E47FD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9DDE9E822964620400E47FD0 /* BeerElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				9DDE9E742964464200E47FD0 /* discoverBeerApp.swift */,
 				9DDE9E762964464200E47FD0 /* ContentView.swift */,
+				9DDE9E822964620400E47FD0 /* BeerElement.swift */,
 				9DDE9E782964464300E47FD0 /* Assets.xcassets */,
 				9DDE9E7A2964464300E47FD0 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DDE9E832964620400E47FD0 /* BeerElement.swift in Sources */,
 				9DDE9E772964464200E47FD0 /* ContentView.swift in Sources */,
 				9DDE9E752964464200E47FD0 /* discoverBeerApp.swift in Sources */,
 			);

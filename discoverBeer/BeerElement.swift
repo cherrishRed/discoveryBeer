@@ -121,4 +121,4 @@ struct MashTemp: Codable {
     let duration: Int?
 }
 
-typealias Beer = [BeerElement]
+typealias Beers = [BeerElement]

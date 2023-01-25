@@ -26,11 +26,16 @@ struct ContentView: View {
                                 RoundedRectangle(cornerRadius: 4)
                                     .fill(.brown.opacity(0.4))
                                 HStack {
-                                    Image(systemName: "swift")
-                                        .frame(width: 100, height: 100)
+                                    AsyncImage(url: URL(string: beer.imageURL), scale: .infinity) { image in
+                                        image.resizable()
+                                            .frame(maxWidth: 100, maxHeight: 100)
+                                    } placeholder: {
+                                        Image(systemName: "swift")
+                                    }
                                     Text("\(beer.name)")
                                 }
                             }
+                            .frame(height: 100)
                         }
                     }
                 }

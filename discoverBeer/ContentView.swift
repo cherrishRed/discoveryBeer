@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct ContentView: View {
     @State var beers: Beers = []
@@ -31,12 +32,39 @@ struct ContentView: View {
         }
         .padding(10)
         .onAppear {
-            fetchData { (data, error) in
+            fetchDataWithAF { (data, error) in
                 guard let data = data else { return }
                 let decoder = JSONDecoder()
                 let result = try? decoder.decode([BeerElement].self, from: data)
                 beers = result ?? []
             }
+
+            
+//            fetchData { (data, error) in
+//                guard let data = data else { return }
+//                let decoder = JSONDecoder()
+//                let result = try? decoder.decode([BeerElement].self, from: data)
+//                beers = result ?? []
+//            }
+        }
+    }
+    
+    func fetchDataWithAF(completionHandler: @escaping (Data?, Error?) -> Void) {
+        // urlRequest 생성
+        let apiurl = "https://api.punkapi.com/v2/beers?page=1&per_page=20"
+        
+        AF.request(apiurl)
+            .validate(statusCode: 200..<300)
+            .response { response in
+                
+                switch response.result {
+                case .success(let data):
+                    completionHandler(data, nil)
+                    return
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completionHandler(nil, error)
+                }
         }
     }
     
